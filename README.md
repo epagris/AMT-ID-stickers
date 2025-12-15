@@ -10,6 +10,7 @@ A tároló egy teljes, működő projektet tartalmaz.
 - *Hallgatók felsorolása* termenként különálló, **vesszővel tagolt** CSV fájlokban, a [`rooms`](rooms) könyvtárban elhelyezve. A táblázatnak a következő oszlopokat kell tartalmaznia:
     - `name`: hallgató neve
     - `room`: terem megjelölése
+    - `course`: kurzusmegjelölés
     - `barcode`: a vonalkódra/QR-kódra kerülő információ
     - `logo`: a jobb alsó sarokban megjelenített piktogram fájlneve a [`logos`](logos) könyvtárhoz képest relatív elérési úttal,
    Ezeken felül a táblázat AMC-beli későbbi felhasználását megkönnyítendő, célszerű egy `id`, illetve egy `neptun` mezővel is ellátni a táblázatot.
