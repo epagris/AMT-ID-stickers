@@ -20,7 +20,7 @@ A generált matrica-oldalak a [`pages`](pages) mappában fognak megjelenni.
 
 ## Futtatás
 
-A matricák generálása a [`gen_stickers.sh`](gen_stickers.sh) script futtatásával történik, ami a [`barcode-gen.tex`](barcode-gen.tex) segítésgével a [`rooms`](rooms) mappában található összes `.csv` táblázathoz előállítja a matricákat tartalmazó PDF oldalakat, amiket a `pages` mappába helyez végül.
+A matricák generálása a [`gen_stickers.sh`](gen_stickers.sh) script futtatásával történik, ami a [`barcode-gen.tex`](barcode-gen.tex) segítésgével a [`rooms`](rooms) mappában található összes `.csv` táblázathoz előállítja a matricákat tartalmazó PDF oldalakat, amiket a [`pages`](pages) mappába helyez végül.
 
 ### Függőségek
 
