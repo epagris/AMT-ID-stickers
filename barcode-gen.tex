@@ -1,0 +1,44 @@
+% !TeX spellcheck = hu_HU
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+
+\documentclass[a4paper]{article}
+
+\usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{pst-barcode}
+\usepackage{csvsimple-l3}
+\usepackage{graphicx}
+
+% ---------
+
+\geometry{left=10mm, top=10.7mm, right=10mm, bottom=10.7mm}
+
+\newcommand{\mtbarcode}[5]{%
+	\begin{pspicture}(38.6mm,20.8mm)%
+		\rput[bc](3mm, 5mm){%
+			\psbarcode{#1}{height=0.5 width=0.5}{qrcode}%
+		}%
+		\rput[tl](17mm,17mm){%
+			\parbox[t]{0.8in}{\scriptsize\texttt{#2}\\\texttt{#1}\\\texttt{#4}\\\texttt{#5}%
+		}}%
+		\rput[br](35mm,2mm){\includegraphics[width=8mm]{logos/#3}}%
+	\end{pspicture}\hspace{-0.6mm}%
+}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\noindent\csvreader[
+	head to column names
+]{\csvfile}{}{%
+	\noindent\mtbarcode{\barcode}{\name}{\logo}{\course}{\room}%
+}
+
+\end{document}
