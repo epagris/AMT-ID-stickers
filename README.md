@@ -6,21 +6,21 @@ A tároló egy teljes, működő projektet tartalmaz.
 
 ## Bemenetek
 
-- *Lehetséges piktogramok* a `logos` könyvtárban,
-- *Hallgatók felsorolása* termenként különálló, **vesszővel tagolt** CSV fájlokban, a `rooms` könyvtárban elhelyezve. A táblázatnak a következő oszlopokat kell tartalmaznia:
+- *Lehetséges piktogramok* a [`logos`](logos) könyvtárban,
+- *Hallgatók felsorolása* termenként különálló, **vesszővel tagolt** CSV fájlokban, a [`rooms`](rooms) könyvtárban elhelyezve. A táblázatnak a következő oszlopokat kell tartalmaznia:
     - `name`: hallgató neve
     - `room`: terem megjelölése
     - `barcode`: a vonalkódra/QR-kódra kerülő információ
-    - `logo`: a jobb alsó sarokban megjelenített piktogram fájlneve a `logos` könyvtárhoz képest relatív elérési úttal,
+    - `logo`: a jobb alsó sarokban megjelenített piktogram fájlneve a [`logos`](logos) könyvtárhoz képest relatív elérési úttal,
    Ezeken felül a táblázat AMC-beli későbbi felhasználását megkönnyítendő, célszerű egy `id`, illetve egy `neptun` mezővel is ellátni a táblázatot.
 
 ## Kimenetek
 
-A generált matrica-oldalak a `pages` mappában fognak megjelenni.
+A generált matrica-oldalak a [`pages`](pages) mappában fognak megjelenni.
 
 ## Futtatás
 
-A matricák generálása a `gen_stickers.sh` script futtatásával történik, ami a `rooms` mappában található összes `.csv` táblázathoz előállítja a PDF oldalakat, amiket a `pages` mappába helyez végül.
+A matricák generálása a [`gen_stickers.sh`](gen_stickers.sh) script futtatásával történik, ami a [`barcode-gen.tex`](barcode-gen.tex) segítésgével a [`rooms`](rooms) mappában található összes `.csv` táblázathoz előállítja a matricákat tartalmazó PDF oldalakat, amiket a `pages` mappába helyez végül.
 
 ### Függőségek
 
